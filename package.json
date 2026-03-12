@@ -1,0 +1,19 @@
+{
+  "name": "password-strength-checker",
+  "version": "1.1.0",
+  "description": "A comprehensive password strength analyzer with entropy calculation and crack time estimation.",
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js",
+    "web": "npx serve web"
+  },
+  "keywords": [
+    "password",
+    "security",
+    "strength-checker",
+    "entropy",
+    "crack-time"
+  ],
+  "author": "eyos",
+  "license": "MIT"
+}
