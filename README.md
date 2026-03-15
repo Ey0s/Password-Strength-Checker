@@ -1,6 +1,6 @@
-#  Password Strength Checker
+# Password Strength Checker
 
-![Password Checker Preview](assets/preview.png)
+![Password Checker Preview](assets/image.png)
 
 A comprehensive, high-performance password strength analyzer designed to help users create secure credentials. This tool provides detailed feedback, calculates entropy, and estimates crack times for various attack scenarios.
 
