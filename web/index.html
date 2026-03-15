@@ -16,14 +16,29 @@
     <p class="subtitle">Secure your digital life with advanced entropy analysis.</p>
 
     <div class="input-group">
-        <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+        <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+            <button id="toggle-password" title="Show/Hide Password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+        </div>
     </div>
 
     <div class="meter-container">
         <div class="meter">
             <div id="strength-bar"></div>
         </div>
-        <span id="score">Score: 0/100</span>
+        <div class="meter-meta">
+            <span id="score">Score: 0/100</span>
+        </div>
+    </div>
+
+    <div class="generator-section">
+        <div class="generator-controls">
+            <label for="length-slider">Length: <span id="length-val">16</span></label>
+            <input type="range" id="length-slider" min="8" max="64" value="16">
+        </div>
+        <button id="generate-btn" class="secondary-btn">Generate Strong Password</button>
     </div>
 
     <div class="stats">
@@ -38,7 +53,6 @@
     </div>
 
     <ul class="feedback-list" id="feedback">
-        <!-- Feedback items will appear here -->
     </ul>
 </div>
 
