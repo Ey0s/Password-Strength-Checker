@@ -14,7 +14,7 @@ A comprehensive, high-performance password strength analyzer designed to help us
 - **Crack Time Estimation**: Estimates how long it would take to crack the password offline and online.
 - **Real-time Feedback**: Actionable suggestions to improve password security.
 - **Dual Interface**: Use it via the Command Line (CLI) or through a clean Web Interface.
-- **Pattern Detection**: Identifies common patterns, keyboard sequences, and dictionary words (coming soon).
+- **Pattern Detection**: Identifies common patterns, keyboard sequences, common passwords, and dictionary words.
 
 ##  Getting Started
 
@@ -53,7 +53,7 @@ Follow the prompt to enter a password and receive a detailed report.
 To launch the web version:
 
 ```bash
-npm run web
+`npm run web`
 ```
 *Note: This requires `serve` or a similar static file server. The command above uses `npx serve`.*
 
@@ -64,10 +64,14 @@ Or simply open `web/index.html` in your favorite browser.
 ```text
 ├── assets/             # Images and design assets
 ├── data/               # Dictionary and pattern data
+│   ├── commonPasswords.txt # Top 1000 most common passwords
+│   └── dictionary.txt     # Top 1000 common English words
 ├── src/                # Core analysis logic
 │   ├── passwordAnalyzer.js  # Main entry point for analysis
 │   ├── entropy.js           # Entropy calculations
-│   └── crackTime.js        # Crack time estimations
+│   ├── crackTime.js        # Crack time estimations
+│   ├── patterns.js         # Pattern and dictionary detection
+│   └── generator.js        # Password generation logic
 ├── web/                # Web interface files
 ├── cli.js              # CLI entry point
 └── package.json        # Project metadata
