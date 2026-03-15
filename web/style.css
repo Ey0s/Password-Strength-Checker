@@ -48,6 +48,7 @@ h1 {
     margin-bottom: 8px;
     background: linear-gradient(to right, #818cf8, #c084fc);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
@@ -59,25 +60,95 @@ p.subtitle {
     margin-bottom: 32px;
 }
 
-.input-group {
-    margin-bottom: 24px;
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
     width: 100%;
     background: rgba(15, 23, 42, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 14px 16px;
+    padding-right: 50px;
     color: white;
     font-size: 16px;
     transition: all 0.2s;
     outline: none;
 }
 
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="text"]:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+#toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+#toggle-password:hover {
+    color: var(--text);
+}
+
+.generator-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.generator-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.generator-controls label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+#length-slider {
+    width: 100px;
+    accent-color: var(--primary);
+}
+
+.secondary-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.secondary-btn:active {
+    transform: translateY(0);
 }
 
 .meter-container {
