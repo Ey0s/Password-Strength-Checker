@@ -6,5 +6,3 @@ build/
 *.log
 .vscode/
 .idea/
-commonPasswords.txt
-dictionary.txt
