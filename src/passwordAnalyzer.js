@@ -42,8 +42,21 @@ function analyzePassword(password) {
     if (patternResults.keyboard)
         feedback.push("Avoid keyboard patterns (qwerty)");
 
+    if (patternResults.isCommon) {
+        score -= 50;
+        feedback.push("This is a very common password");
+    }
+
+    if (patternResults.isDictionary) {
+        score -= 20;
+        feedback.push("Avoid using common dictionary words");
+    }
+
     const entropy = calculateEntropy(password);
     score += Math.min(20, Math.floor(entropy / 4));
+
+    // Ensure score stays within 0-100
+    score = Math.max(0, Math.min(100, score));
 
     const crackTime = estimateCrackTime(entropy);
 
